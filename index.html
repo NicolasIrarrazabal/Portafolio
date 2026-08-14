@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicolás Irarrázabal — Portafolio</title>
+<meta name="description" content="Portafolio de Nicolás Irarrázabal, estudiante de Ingeniería en Informática. Backend, DevOps y proyectos de ingeniería inversa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="navbar" id="navbar">
+  <div class="wrap navbar__inner">
+    <a href="#top" class="navbar__brand">
+      <span class="dot" aria-hidden="true"></span>
+      nicolas<span class="text-amber">@</span>irarrazabal<span class="text-dim">:~$</span>
+    </a>
+
+    <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="navLinks" class="navbar__links">
+      <a href="#sobre-mi" data-nav>0x00 sobre-mi</a>
+      <a href="#stack" data-nav>0x01 stack</a>
+      <a href="#proyectos" data-nav>0x02 proyectos</a>
+      <a href="#educacion" data-nav>0x03 educacion</a>
+      <a href="#contacto" class="navbar__cta" data-nav>0x04 contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+
+      <div class="hero__copy">
+        <div class="proc-bar">
+          <span class="proc-dot proc-dot--live" aria-hidden="true"></span>
+          proceso <span class="text-amber">nico.exe</span> · pid <span id="pid">2026</span> · estado
+          <span class="text-green">ONLINE</span>
+        </div>
+
+        <h1 class="hero__title">
+          Nicolás Irarrázabal
+        </h1>
+        <p class="hero__role">
+          Estudiante de Ingeniería en Informática <span class="text-dim">//</span> Backend &amp; DevOps
+        </p>
+
+        <p class="hero__desc">
+Estudio Ingeniería en Informática en <strong>Duoc UC</strong>, Puerto Montt, lugar en donde estoy aprendiendo Springboot, microservicios, y distintos lenguajes de programacion como Python, java y kotlin. Por mi cuenta, desarrollo herramientas para videojuegos y experimento con reverse engineering, análisis de tráfico, memoria de procesos y automatización.	
+        </p>
+
+        <div class="hero__cta">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="https://github.com/NicolasIrarrazabal" target="_blank" rel="noopener" class="btn btn--ghost">
+            GitHub ↗
+          </a>
+        </div>
+
+        <div class="hero__meta">
+          <span>uptime <span id="uptime">00:00:00</span></span>
+          <span class="sep">·</span>
+          <span>Puerto Montt, Chile</span>
+        </div>
+      </div>
+
+      <div class="hero__panel" aria-hidden="true">
+        <div class="panel">
+          <div class="panel__head">
+            <span class="panel__title">whoami.log</span>
+            <span class="panel__lights"><i></i><i></i><i></i></span>
+          </div>
+          <pre class="panel__body"><code><span class="text-dim">$</span> whoami
+nicolas_irarrazabal
+
+<span class="text-dim">$</span> cat estado.txt
+rol       : dev backend / devops
+hobby     : reverse engineering
+motor     : Spring Boot, Java, C#
+proceso   : DofusTabs.exe    <span class="text-dim">[archived]</span>
+proceso   : TopbOT.exe       <span class="text-dim">[archived]</span>
+proceso   : wintabber.exe    <span class="text-dim">[archived]</span>
+
+<span class="text-dim">$</span> tail -f pipeline.log
+[ok] build ..... <span class="text-cyan">passed</span>
+[ok] tests ..... <span class="text-cyan">passed</span>
+[ok] sonarcloud . <span class="text-cyan">clean</span>
+[ok] deploy ..... <span class="text-cyan">aws ec2</span><span class="cursor-blink">_</span></code></pre>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SOBRE MI ============ -->
+  <section id="sobre-mi" class="section">
+    <div class="wrap section__grid">
+
+      <div class="section__intro">
+        <span class="eyebrow">0x00 · sobre mí</span>
+        <h2 class="section__title">Dos procesos corriendo en paralelo</h2>
+        <p>
+          Estoy en segundo año de Ingeniería en Informática en <strong>Duoc UC, sede Puerto Montt</strong>.
+          Mi formación se centra en el desarrollo backend con Java y Spring Boot, y en prácticas DevOps:
+          pipelines de integración continua, contenedores, análisis de calidad y despliegue en la nube.
+        </p>
+        <p>
+          En paralelo, desde hace años exploro la ingeniería inversa por afición: interceptar paquetes de red,
+          leer y escribir memoria de procesos en ejecución, e inyectar eventos de entrada para automatizar
+          videojuegos. Es un terreno distinto al académico, pero exige la misma disciplina: entender un sistema
+          que no diseñaste, con la documentación que tú mismo construyes a partir de la observación.
+        </p>
+      </div>
+
+      <div class="specs" role="img" aria-label="Ficha técnica en formato neofetch">
+        <div class="specs__head">
+          <span class="specs__title">neofetch</span>
+        </div>
+        <dl class="specs__list">
+          <div><dt>OS</dt><dd>Duoc UC — Ing. Informática</dd></div>
+          <div><dt>Nivel</dt><dd>Año 2, semestre 2 (nivel 4)</dd></div>
+          <div><dt>Shell</dt><dd>Java · Spring Boot</dd></div>
+          <div><dt>Backend</dt><dd>REST APIs, microservicios, JPA</dd></div>
+          <div><dt>DevOps</dt><dd>GitHub Actions, Docker, AWS EC2</dd></div>
+          <div><dt>Reverse Eng.</dt><dd>C#, Frida, Cheat Engine</dd></div>
+          <div><dt>Ubicación</dt><dd>Puerto Montt, Chile</dd></div>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section id="stack" class="section section--alt">
+    <div class="wrap">
+      <span class="eyebrow">0x01 · stack</span>
+      <h2 class="section__title">Herramientas que uso a diario</h2>
+
+      <div class="skills">
+        <article class="skill-card">
+          <h3 class="skill-card__title"><span class="text-amber">01</span> Backend &amp; Bases de datos</h3>
+          <ul class="tag-list">
+            <li>Java</li><li>Spring Boot</li><li>REST APIs</li><li>PL/SQL</li><li>Oracle</li><li>Flyway</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3 class="skill-card__title"><span class="text-amber">02</span> DevOps &amp; CI/CD</h3>
+          <ul class="tag-list">
+            <li>GitHub Actions</li><li>Docker</li><li>SonarCloud</li><li>Snyk</li><li>JaCoCo</li><li>AWS EC2</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3 class="skill-card__title"><span class="text-amber">03</span> Sistemas &amp; Reverse Engineering</h3>
+          <ul class="tag-list">
+            <li>C#</li><li>Frida</li><li>SharpPcap</li><li>Cheat Engine</li><li>OpenCV</li><li>SDL2</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3 class="skill-card__title"><span class="text-amber">04</span> Frontend &amp; Herramientas</h3>
+          <ul class="tag-list">
+            <li>HTML / CSS / JS</li><li>Python</li><li>Tkinter</li><li>Git / GitFlow</li><li>Postman</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROYECTOS ============ -->
+  <section id="proyectos" class="section">
+    <div class="wrap">
+      <span class="eyebrow">0x02 · proyectos</span>
+      <h2 class="section__title">Procesos activos y archivados</h2>
+      <div class="filters" role="group" aria-label="Filtrar proyectos por categoría">
+        <button class="filter-btn is-active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="backend">Backend &amp; DevOps</button>
+        <button class="filter-btn" data-filter="reverse">Reverse Engineering</button>
+        <button class="filter-btn" data-filter="otros">Otros</button>
+      </div>
+
+      <div class="projects" id="projectsGrid">
+
+        <article class="proc-card" data-category="backend">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x00</span>
+            </div>
+          <h3 class="proc-card__name">InstitutoPacifico</h3>
+          <p class="proc-card__desc">
+            Sistema académico compuesto por 11 microservicios en Spring Boot (carreras, asignaturas,
+            docentes, empresas, estudiantes, matrículas, aranceles, notas, asistencia, prácticas y
+            gateway). Migraciones con Flyway, cobertura con JaCoCo y despliegue de ms-carreras en Render.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>Java</li><li>Spring Boot</li><li>Flyway</li><li>Microservicios</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal/InstitutoPacifico" target="_blank" rel="noopener" class="proc-card__link">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="backend">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x01</span>
+            </div>
+          <h3 class="proc-card__name">Auth Microservice — DOY0101</h3>
+          <p class="proc-card__desc">
+            Microservicio de autenticación con pipeline de CI/CD completo: GitHub Actions, SonarCloud,
+            Snyk, Dependabot, JaCoCo, Docker y despliegue en AWS EC2. Evaluado contra una rúbrica de
+            cinco indicadores DevOps (contenerización, testing, seguridad, trazabilidad y orquestación),
+            con reportes comparativos generados en Chart.js.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>Spring Boot</li><li>Docker</li><li>GitHub Actions</li><li>SonarCloud</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal" target="_blank" rel="noopener" class="proc-card__link">
+            Ver perfil de GitHub ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="backend">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x02</span>
+            </div>
+          <h3 class="proc-card__name">Educore-microservice</h3>
+          <p class="proc-card__desc">
+            Microservicio orientado a gestión educativa, desarrollado en Java como parte de mi práctica
+            continua con arquitecturas backend distribuidas.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>Java</li><li>Microservicios</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal/Educore-microservice" target="_blank" rel="noopener" class="proc-card__link">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="reverse">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x03</span>
+            </div>
+          <h3 class="proc-card__name">DofusTabs</h3>
+          <p class="proc-card__desc">
+            Administrador de ventanas avanzado para Dofus Retro, optimizado para múltiples instancias.
+            Detecta eventos del juego en tiempo real (turnos, intercambios, grupos) y enfoca la ventana
+            correcta automáticamente, eliminando el retraso típico de alt-tab y herramientas similares.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>C#</li><li>WinForms</li><li>SharpPcap</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal/DofusTabs" target="_blank" rel="noopener" class="proc-card__link">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="reverse">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x04</span>
+            <span class="status status--archived">archived</span>
+          </div>
+          <h3 class="proc-card__name">wintabber-dofus</h3>
+          <p class="proc-card__desc">
+            Primera versión del gestor de ventanas para Dofus Retro: enfoca automáticamente el personaje
+            correcto según eventos del juego (GTS, ERK, PIK). Precursor directo de DofusTabs.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>C#</li><li>Automatización</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal/wintabber-dofus" target="_blank" rel="noopener" class="proc-card__link">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="reverse">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x05</span>
+            </div>
+          <h3 class="proc-card__name">TopbOT — Pirates Online</h3>
+          <p class="proc-card__desc">
+            Bot de automatización para Pirates Online (Moonlight Haven). Incluye autowalk por escritura
+            directa en memoria, detección de NPCs y enemigos con Cheat Engine y Frida, auto-loot,
+            reconocimiento de captchas con OpenCV + 2Captcha, e inyección de eventos SDL2 para jugar en
+            segundo plano.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>Frida</li><li>Cheat Engine</li><li>OpenCV</li><li>SDL2</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal" target="_blank" rel="noopener" class="proc-card__link">
+            Ver perfil de GitHub ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="reverse">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x06</span>
+            <span class="status status--archived">archived</span>
+          </div>
+          <h3 class="proc-card__name">Dofus-tools</h3>
+          <p class="proc-card__desc">
+            Herramientas en Python para interceptar y analizar tráfico de red de Dofus Retro,
+            identificando personajes a partir de paquetes del juego.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>Python</li><li>Networking</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal/Dofus-tools" target="_blank" rel="noopener" class="proc-card__link">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="backend">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x07</span>
+            </div>
+          <h3 class="proc-card__name">api-cursos-postman</h3>
+          <p class="proc-card__desc">
+            API REST de cursos desarrollada en Java, documentada y probada íntegramente con Postman
+            como parte de mi práctica en diseño y verificación de APIs.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>Java</li><li>Postman</li><li>REST</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal/api-cursos-postman" target="_blank" rel="noopener" class="proc-card__link">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="proc-card" data-category="otros">
+          <div class="proc-card__top">
+            <span class="proc-card__id">0x08</span>
+            </div>
+          <h3 class="proc-card__name">UrlKnight</h3>
+          <p class="proc-card__desc">
+            Gestor de enlaces de escritorio para plataformas académicas, construido en equipo para el
+            ramo Fundamentos de Ingeniería de Software. Incluyó diagramas UML (casos de uso, clases y
+            secuencia) y la defensa del proyecto con una presentación de 14 diapositivas.
+          </p>
+          <ul class="tag-list tag-list--sm">
+            <li>Python</li><li>Tkinter</li><li>UML</li>
+          </ul>
+          <a href="https://github.com/NicolasIrarrazabal" target="_blank" rel="noopener" class="proc-card__link">
+            Ver perfil de GitHub ↗
+          </a>
+        </article>
+
+      </div>
+
+      <p class="filters__empty" id="filtersEmpty" hidden>No hay procesos en esta categoría todavía.</p>
+    </div>
+  </section>
+
+
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" class="section section--contact">
+    <div class="wrap">
+      <span class="eyebrow">0x04 · contacto</span>
+      <h2 class="section__title">Hablemos</h2>
+      <p class="section__lead">
+        ¿Tienes una idea, una práctica o un proyecto en mente? Escríbeme por este formulario o
+        directamente por GitHub.
+      </p>
+
+      <div class="contact__grid">
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <span class="form__error" data-error-for="name"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="form__error" data-error-for="email"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="form__error" data-error-for="message"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary form__submit">
+            <span class="btn__label">Enviar mensaje</span>
+          </button>
+
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact__side">
+          <div class="panel panel--sm">
+            <div class="panel__head">
+              <span class="panel__title">contacto.env</span>
+              <span class="panel__lights"><i></i><i></i><i></i></span>
+            </div>
+            <pre class="panel__body"><code>GITHUB   = <a href="https://github.com/NicolasIrarrazabal" target="_blank" rel="noopener">github.com/NicolasIrarrazabal</a>
+EMAIL    = ni.irarrazabal@duocuc.cl
+UBICACION= Puerto&nbsp;Montt,&nbsp;Chile
+DISPONIBLE_PARA = práctica&nbsp;/&nbsp;proyectos&nbsp;colaborativos</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>© <span id="year">2026</span> Nicolás Irarrázabal. Construido con HTML, CSS y JS puro.</p>
+    <a href="#top" class="footer__top">volver arriba ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
