@@ -42,7 +42,7 @@ sections.forEach((section) => spyObserver.observe(section));
    REVEAL ON SCROLL
    ========================================================= */
 const revealTargets = document.querySelectorAll(
-  '.section__intro, .specs, .skill-card, .proc-card, .log__entry'
+  '.section__intro, .specs, .skill-card, .proc-card, .log__entry, .contact__grid > *'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
@@ -101,6 +101,64 @@ filterButtons.forEach((btn) => {
 
     emptyMessage.hidden = visibleCount !== 0;
   });
+});
+
+/* =========================================================
+   CONTACT FORM: client-side validation (no backend)
+   ========================================================= */
+const form = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+const validators = {
+  name: (value) => value.trim().length >= 2 || 'Ingresa tu nombre completo.',
+  email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()) || 'Ingresa un correo válido.',
+  message: (value) => value.trim().length >= 10 || 'Cuéntame un poco más (mínimo 10 caracteres).',
+};
+
+function validateField(field) {
+  const row = field.closest('.form__row');
+  const errorEl = row.querySelector('.form__error');
+  const result = validators[field.name](field.value);
+
+  if (result === true) {
+    row.classList.remove('has-error');
+    errorEl.textContent = '';
+    return true;
+  }
+
+  row.classList.add('has-error');
+  errorEl.textContent = result;
+  return false;
+}
+
+form.querySelectorAll('input, textarea').forEach((field) => {
+  field.addEventListener('blur', () => validateField(field));
+});
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const fields = [...form.querySelectorAll('input, textarea')];
+  const isValid = fields.map(validateField).every(Boolean);
+
+  if (!isValid) {
+    formStatus.style.color = 'var(--coral)';
+    formStatus.textContent = 'Revisa los campos marcados antes de enviar.';
+    return;
+  }
+
+  // No hay backend conectado: se simula el envío para esta entrega.
+  const submitBtn = form.querySelector('.form__submit');
+  submitBtn.disabled = true;
+  formStatus.style.color = 'var(--amber)';
+  formStatus.textContent = 'Enviando...';
+
+  setTimeout(() => {
+    formStatus.style.color = 'var(--green)';
+    formStatus.textContent = '✓ Mensaje listo para enviar .';
+    submitBtn.disabled = false;
+    form.reset();
+  }, 700);
 });
 
 /* =========================================================
