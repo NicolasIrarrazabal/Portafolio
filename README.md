@@ -1,8 +1,8 @@
 # nicolas@irarrazabal:~$ portafolio
 
-Portafolio personal de **Nicolás Irarrázabal**, estudiante de Ingeniería en Informática (Duoc UC, Puerto Montt), con temática terminal/hacker.
+Portafolio personal de **Nicolás Irarrázabal**, estudiante de Ingeniería en Informática (Duoc UC, Puerto Montt).
 
-🔗 Demo: abrir `index.html` en el navegador.
+🔗 Demo: https://nicolasirarrazabal.github.io/Portafolio/
 
 ## Contenido
 
