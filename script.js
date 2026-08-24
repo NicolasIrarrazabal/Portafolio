@@ -155,7 +155,7 @@ form.addEventListener('submit', (event) => {
 
   setTimeout(() => {
     formStatus.style.color = 'var(--green)';
-    formStatus.textContent = '✓ Mensaje listo para enviar (conecta este formulario a tu backend o servicio de correo).';
+    formStatus.textContent = '✓ Mensaje listo para enviar .';
     submitBtn.disabled = false;
     form.reset();
   }, 700);
